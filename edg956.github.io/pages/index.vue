@@ -9,7 +9,9 @@
           GitHub
         </a>
       </card>
-
+      <card title="Who Am I" icon="github">
+      	Eugenio Doñaque
+      </card>
       <card
         title="Responsive"
         icon="cellphone-link"

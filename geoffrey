@@ -14,7 +14,14 @@ start () {
 }
 
 install () {
-	$DEFAULT_RUN_CMD $IMAGE_NAME npm run generate
+	$DEFAULT_RUN_CMD $IMAGE_NAME npm run generate > /dev/null
+	git checkout gh-pages > /dev/null
+	cp -a dist/. .
+	rm -r dist
+	git add . > /dev/null
+	git commit -m "Installed new version" > /dev/null
+	git push > /dev/null
+	git checkout master > /dev/null
 }
 
 ensure_deps () {
