@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+IMAGE_NAME="edg956.github.io"
+DEFAULT_RUN_CMD="docker run -it --workdir /app/${IMAGE_NAME} -v `pwd`:/app"
+build () {
+	docker build . -t $IMAGE_NAME
+}
+
+shell() {
+	$DEFAULT_RUN_CMD $IMAGE_NAME bash
+}
+
+start () {
+	$DEFAULT_RUN_CMD -p 3000:3000 $IMAGE_NAME npm run dev		
+}
+
+install () {
+	$DEFAULT_RUN_CMD $IMAGE_NAME npm run generate
+}
+
+case $1 in
+	build)
+		build
+		;;
+	start)
+		start
+		;;
+	install)
+		install
+		;;
+	shell)
+		shell
+		;;
+	*)
+		echo "Unknown command"
+		;;
+esac
