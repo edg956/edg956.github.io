@@ -17,6 +17,10 @@ install () {
 	$DEFAULT_RUN_CMD $IMAGE_NAME npm run generate
 }
 
+ensure_deps () {
+	$DEFAULT_RUN_CMD -u=$(id -u $(whoami)) $IMAGE_NAME npm install
+}
+
 case $1 in
 	build)
 		build
@@ -29,6 +33,9 @@ case $1 in
 		;;
 	shell)
 		shell
+		;;
+	ensure_deps)
+		ensure_deps
 		;;
 	*)
 		echo "Unknown command"
