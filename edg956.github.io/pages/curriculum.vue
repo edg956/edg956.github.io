@@ -42,9 +42,17 @@ export default {
 	  title: "Software Developer",
 	  company: "Lana Fintech Internacional",
 	  startDate: '2022-01',
-	  endDate: 'Now',
+	  endDate: '2022-05',
 	  description: 'Used Django REST framework to develop an API for the onboarding process of a digital wallet, including KYC, AML and identity verification. Managed applications deployed in GKE with ArgoCD and Helm. Read and applied minor patches in Go codebases as required in our microservice architecture',
 	  tags: ['Python', 'Django', 'Kubernetes', 'GCP', 'Go']
+	},
+      	{
+	  title: "Software Engineer",
+	  company: "Ontruck",
+	  startDate: '2022-05',
+	  endDate: 'Now',
+	  description: 'Develop features for a marketplace that matches businesses wanting to send pallets and truck drivers, optimising truck loads and focusing on spot orders.',
+	  tags: ['Python', 'Django', 'Kubernetes', 'GCP']
 	},
       ]
     }
