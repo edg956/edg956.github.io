@@ -19,6 +19,11 @@
 <script>
 export default {
   name: "CurriculumPage",
+  head() {
+    return {
+      title: "Experience of Doñ",
+    };
+  },
   data () {
     return {
       jobs: [
