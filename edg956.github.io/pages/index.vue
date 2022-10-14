@@ -11,6 +11,9 @@
 	    <b-icon :icon="site.icon" type="is-dark"/>
 	  </a>.
 	</p>
+	<p>
+	  You can contact me through my personal <a href="mailto:inquiries@donaque.xyz">email</a>.
+	</p>
       </div>
     </div>
   </section>
