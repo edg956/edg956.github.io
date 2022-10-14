@@ -21,7 +21,7 @@ export default {
   name: "CurriculumPage",
   head() {
     return {
-      title: "Experience of Doñ",
+      title: "Experience",
     };
   },
   data () {
