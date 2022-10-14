@@ -14,7 +14,7 @@
     <Nuxt />
     <footer class="footer">
       <div class="content has-text-centered">
-      	<a href="https://www.flaticon.com/free-icons/arepas" title="arepas icons">Arepas icons created by shmai - Flaticon</a>
+      	<a href="https://www.flaticon.com/free-icons/letter-d" title="letter d icons">Letter d icons created by Kian Bonanno - Flaticon</a>
 	<p>Site created with <a href="https://buefy.org/">Buefy</a> and <a href="https://nuxtjs.org/">Nuxt.js</a></p>
       </div>
     </footer>
