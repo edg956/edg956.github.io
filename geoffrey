@@ -1,20 +1,8 @@
 #!/usr/bin/env bash
-IMAGE_NAME="edg956.github.io"
-DEFAULT_RUN_CMD="docker run -it --rm --workdir /app/${IMAGE_NAME} -v `pwd`:/app"
-build () {
-	docker build . -t $IMAGE_NAME
-}
-
-shell() {
-	$DEFAULT_RUN_CMD $IMAGE_NAME bash
-}
-
-start () {
-	$DEFAULT_RUN_CMD -p 3000:3000 $IMAGE_NAME npm run dev		
-}
-
 install () {
-	$DEFAULT_RUN_CMD $IMAGE_NAME npm run generate > /dev/null
+    cd edg956.github.io
+	yarn generate > /dev/null
+	cd ..
 	git checkout gh-pages > /dev/null
 	cp -a dist/. .
 	rm -r dist
@@ -25,7 +13,7 @@ install () {
 }
 
 ensure_deps () {
-	$DEFAULT_RUN_CMD -u=$(id -u $(whoami)) $IMAGE_NAME npm install
+	yarn install
 }
 
 case $1 in
