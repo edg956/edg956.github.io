@@ -28,6 +28,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/ga.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -53,5 +54,9 @@ export default {
   },
   generate: {
     dir: '../dist'
+  },
+  publicRuntimeConfig: {
+    googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
+    isProd: process.env.NODE_ENV === 'production'
   }
 }
