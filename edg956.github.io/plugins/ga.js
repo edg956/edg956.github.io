@@ -1,7 +1,9 @@
 import Vue from 'vue';
 import VueGtag from 'vue-gtag';
 
-export default ({app: {router}, $config}, inject) => {
+export default ({ app, $config }, inject) => {
+  const router = app.router;
+
   Vue.use(
     VueGtag,
     {
