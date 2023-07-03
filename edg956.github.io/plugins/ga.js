@@ -1,8 +1,7 @@
-import Vue from 'vue';
 import VueGtag from 'vue-gtag';
 
 export default ({ app, $config }, inject) => {
-  Vue.use(
+  app.use(
     VueGtag,
     {
       config: {
