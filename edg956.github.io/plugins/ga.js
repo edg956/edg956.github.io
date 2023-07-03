@@ -8,7 +8,7 @@ export default ({ app, $config }, inject) => {
       config: {
         id: $config.googleAnalyticsId
 	  },
-      pageTrackerScreenviewEnabled: true
+      pageTrackerScreenviewEnabled: true,
       enabled: $config.isProd 
     },
     app.router
