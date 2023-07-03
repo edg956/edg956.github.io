@@ -37,6 +37,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -52,6 +53,10 @@ export default {
     host: '0.0.0.0'
   },
   generate: {
-    dir: '/app/dist'
+    dir: '../dist'
+  },
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID,
+    dev: process.env.NODE_ENV !== 'production'
   }
 }
