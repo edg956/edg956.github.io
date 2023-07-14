@@ -51,7 +51,15 @@ export default {
 	  description: 'Used Django REST framework to develop an API for the onboarding process of a digital wallet, including KYC, AML and identity verification. Managed applications deployed in GKE with ArgoCD and Helm. Read and applied minor patches in Go codebases as required in our microservice architecture',
 	  tags: ['Python', 'Django', 'Kubernetes', 'GCP', 'Go']
 	},
-      	{
+	{
+	  title: "Software Engineer",
+	  company: "Equilibre Finance",
+	  startDate: "2022-10",
+	  endDate: "2022-12",
+	  description: "Part-time work dealing with full stack tasks from infrastructure to frontend of a DeFi project https://www.equilibrefinance.com",
+	  tags: ["Web3", "Python", "Docker", "Nextjs", "Javascript"]
+	},
+    {
 	  title: "Software Engineer",
 	  company: "Ontruck",
 	  startDate: '2022-05',
