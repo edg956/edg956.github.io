@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 install () {
-    cd edg956.github.io
-	yarn generate > /dev/null
-	cd ..
-	git checkout gh-pages > /dev/null
-	cp -a dist/. .
-	rm -r dist
-	git add . > /dev/null
-	git commit -m "Installed new version" > /dev/null
-	git push > /dev/null
-	git checkout master > /dev/null
+		cd edg956.github.io
+		yarn generate > /dev/null
+		cd ..
+		git checkout gh-pages > /dev/null
+		cp -a dist/. .
+		rm -r dist
+		git add . > /dev/null
+		git commit -m "Installed new version" > /dev/null
+		git push > /dev/null
+		git checkout master > /dev/null
 }
 
 ensure_deps () {
