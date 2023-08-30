@@ -6,10 +6,10 @@
 	<p class="subtitle">I'm a software engineer based in Spain.</p>
 	<p>I like crossfit, arepas and python.</p>
 	<p>
-	  You can find me on the internet on  
-	  <a v-for="site in sites" :href="site.link">
+	  You can find me on the internet on
+	  <TrackedAnchor v-for="site in sites" :href="site.link">
 	    <b-icon :icon="site.icon" type="is-dark"/>
-	  </a>.
+	  </TrackedAnchor>.
 	</p>
 	<p>
 	  You can contact me through my personal <a href="mailto:inquiries@donaque.xyz">email</a>.
@@ -20,10 +20,12 @@
 </template>
 
 <script>
+import TrackedAnchor from '../components/TrackedAnchor';
 
 export default {
   name: 'IndexPage',
   components: {
+    TrackedAnchor
   },
   data () {
     return {
