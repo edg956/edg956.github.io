@@ -28,24 +28,20 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/ga.js'
+    '~/plugins/posthog.js'
   ],
-
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
   ],
-
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/buefy
     'nuxt-buefy',
   ],
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
@@ -56,7 +52,8 @@ export default {
     dir: '../dist'
   },
   publicRuntimeConfig: {
-    googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
+    posthogPublicKey: process.env.NUXT_POSTHOG_PUBLIC_KEY,
+    posthogHost: process.env.NUXT_POSTHOG_HOST,
     isProd: process.env.NODE_ENV === 'production'
   }
 }
