@@ -1,0 +1,38 @@
+name: Build and move artifact to gh-pages 🚚
+
+on:
+  workflow_run:
+    workflows: ["ci"]
+    branches: ["master"]
+    types:
+      - completed
+
+jobs:
+  move_to_gh_pages:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@master
+
+      - name: Generate artifact
+        run: yarn generate
+
+      - name: Move artifact to temp-dir
+        run: mv dist /tmp/dist
+
+      - name: Checkout gh-pages branch
+        run: git checkout gh-pages
+
+      - name: Move artifact to gh-pages
+        run: mv /tmp/dist/. .
+
+      - name: Commit changes
+        run: git commit -am "Installed new version"
+
+      - name: Push changes
+        run: git push
+
+      - name: Clean up
+        run: rm -rf /tmp/dist
