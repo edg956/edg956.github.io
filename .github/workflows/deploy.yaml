@@ -16,14 +16,9 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@master
 
-      - name: Move to project dir
-        run: cd edg956.github.io
-
       - name: Generate artifact
+        working-directory: edg956.github.io
         run: yarn generate
-
-      - name: Move to root dir
-        run: cd ..
 
       - name: Move artifact to temp-dir
         run: mv dist /tmp/dist
