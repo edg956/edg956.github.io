@@ -41,8 +41,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies 👨🏻‍💻
-        run: npm ci --prefer-offline --no-audit
-
+        run: yarn run ci --prefer-offline --no-audit
 
       - name: Run tests 🧪
-        run: npm run test
+        run: yarn run test
