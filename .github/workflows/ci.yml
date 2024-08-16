@@ -39,7 +39,7 @@ jobs:
 
       - name: Install dependencies 👨🏻‍💻
         working-directory: edg956.github.io
-        run: yarn run ci --prefer-offline --no-audit
+        run: yarn install --dev
 
       - name: Run tests 🧪
         working-directory: edg956.github.io
