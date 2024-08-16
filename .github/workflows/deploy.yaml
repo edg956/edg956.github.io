@@ -42,7 +42,7 @@ jobs:
         run: mv dist /tmp/dist
 
       - name: Checkout gh-pages branch
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
         with:
           ref: gh-pages
 
