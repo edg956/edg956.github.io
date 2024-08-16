@@ -39,7 +39,7 @@ jobs:
         run: yarn generate
 
       - name: Move artifact to temp-dir
-        run: mv dist /tmp/dist
+        run: mv dist ${{ runner.temp }}/tmp/dist
 
       - name: Checkout gh-pages branch
         uses: actions/checkout@v4
@@ -54,6 +54,3 @@ jobs:
 
       - name: Push changes
         run: git push
-
-      - name: Clean up
-        run: rm -rf /tmp/dist
