@@ -23,6 +23,9 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@master
 
+      - name: Move to project dir
+        run: cd edg956.github.io
+
       - name: Setup node env 🏗
         uses: actions/setup-node@v2.1.5
         with:
