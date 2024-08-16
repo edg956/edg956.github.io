@@ -1,9 +1,9 @@
 <template>
   <div>
-    <b-navbar fixed-top="true" type="is-dark" class="pl-6-tablet pr-6-tablet">
+    <b-navbar :fixed-top="true" type="is-dark" class="pl-6-tablet pr-6-tablet">
       <template #start>
         <b-navbar-item class="is-hidden-mobile" tag="router-link" :to="{path: '/'}">
-      	  <b-image src="https://github.com/edg956.png" alt="EU" rounded></b-image>
+      	  <b-image class="profile-pic" src="https://github.com/edg956.png" alt="EU" ratio="1by1" rounded></b-image>
         </b-navbar-item>
       </template>
       <template #end>
@@ -28,7 +28,6 @@ export default {
 </script>
 <style>
 .profile-pic {
-  border-radius: 50%;
-  height: 5vh;
+  width: 28px;
 }
 </style>
