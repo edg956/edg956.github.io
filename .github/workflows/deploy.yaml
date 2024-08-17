@@ -46,8 +46,8 @@ jobs:
         with:
           ref: gh-pages
 
-      - name: Move artifact to gh-pages
-        run: mv ${{ runner.temp }}/dist/. .
+      - name: Copy app files to gh-pages
+        run: cp -a ${{ runner.temp }}/dist/. .
 
       - name: Commit changes
         run: git commit -am "Installed new version"
