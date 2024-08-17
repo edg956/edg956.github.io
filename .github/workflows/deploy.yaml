@@ -39,7 +39,7 @@ jobs:
         run: yarn generate
 
       - name: Move artifact to temp-dir
-        run: mv dist ${{ runner.temp }}/tmp/dist
+        run: mv dist ${{ runner.temp }}/dist
 
       - name: Checkout gh-pages branch
         uses: actions/checkout@v4
@@ -47,7 +47,7 @@ jobs:
           ref: gh-pages
 
       - name: Move artifact to gh-pages
-        run: mv /tmp/dist/. .
+        run: mv ${{ runner.temp }}/dist/. .
 
       - name: Commit changes
         run: git commit -am "Installed new version"
