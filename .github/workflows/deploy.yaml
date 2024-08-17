@@ -36,6 +36,9 @@ jobs:
 
       - name: Generate artifact
         working-directory: edg956.github.io
+        env:
+          NUXT_POSTHOG_PUBLIC_KEY: "${{ secrets.POSTHOG_PUBLIC_KEY }}"
+          NUXT_POSTHOG_HOST: "https://eu.i.posthog.com"
         run: yarn generate
 
       - name: Move artifact to temp-dir
