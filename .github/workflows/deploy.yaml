@@ -53,7 +53,8 @@ jobs:
         run: |
           git config --global user.email "eugenio@donaque.xyz"
           git config --global user.name "Eugenio"
-          git commit -am "Installed new version"
+          git add -A
+          git commit -m "Installed new version"
 
       - name: Push changes
         run: git push
