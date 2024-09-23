@@ -12,7 +12,7 @@
 	  </TrackedAnchor>.
 	</p>
 	<p>
-	  You can contact me through my personal <a href="mailto:inquiries@donaque.xyz">email</a>.
+	  You can contact me through my personal <a href="mailto:eugenio@donaque.xyz">email</a>.
 	</p>
       </div>
     </div>
